@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -26,4 +26,7 @@ spec:
             memory: "1024Mi"
             cpu: "500m"                
       restartPolicy: Always
+  selector:
+    matchLabels:
+      service: frontend
 
